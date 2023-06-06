@@ -10,13 +10,28 @@ body{
     background-attachment: fixed;
     */
     background: #EFEFEF;
+    font-family: 'Raleway';
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
 }
 label{
     width: 100%;
     margin-bottom: 5px;
     text-align: left;
 }
+.top{
+    margin: 0 auto;
+    top: 0;
+    width: 100%;
+    height: 74px;
+    background-color: #C8C8C8;
+    position: absolute;
+    justify-content: center;
+
+}
 .container{
+    
     max-width: 600px;
     margin: 0 auto;
     /*padding 10%*/
@@ -37,6 +52,25 @@ label{
     margin: 10px 0;
     width: 400px;
 }
+.form-group input{
+    height:30px;
+
+    border: none;
+    border-bottom: 2px solid #C8C8C8;
+    border-radius: 4px 4px 0px 0px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    
+}
+.form-group input:hover{
+
+    border-bottom: 1px solid #009A49;
+    
+}
+.form-group input[type="text"]:focus, .form-group input[type="password"]:focus{
+    outline: none;
+}
 .text-create-account{
     font-size: 0.9em;
     width: 100%;
@@ -44,33 +78,22 @@ label{
     padding-top: 25px; 
 }
 .create-account{
-    color: #36DD0B;
+    color: #009A49;
     text-decoration: none;
+    font-family: 'Raleway';
+font-style: normal;
 }
 .create-account:hover{
     color: #27ae60;
     cursor: pointer;
 }
-input[type="submit"] {
-    background-color: #36DD0B;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    
-}
 
-input[type="submit"]:hover {
-    background-color: #27ae60;
-}
 #form{
-    max-width: 600px;
-    height: 250px;
+    max-width: 100%;
+    height: 100%;
     margin: 0 auto;
     padding: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px 5px #C8C8C8;
     border-radius: 10px;
@@ -120,4 +143,26 @@ input[type="submit"]:hover {
 #imagem{
     
     margin: 0 auto;
+}
+/*----------BOTÃO DE CADASTRO E LOGIN----------*/
+input[type="submit"] {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid #D9D9D9;
+    width: 136px;
+    height: 53px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+    
+    cursor: pointer;
+    
+}
+
+input[type="submit"]:hover {
+    background: #009A49;
+    transition: 400ms;
 }

@@ -9,11 +9,10 @@
         <link rel="stylesheet" href="../CSS/Styles.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="barra">
-            <div class="container-md">
-                <img src="../img/LOGO/GREEN STEAM.svg" alt="Logo" id="imagem">
-            </div>
-          </nav>
+        <div class="top">
+            <img src="../img/LOGO/GREEN STEAM.svg" alt="Logo" id="imagem">
+        </div>
+        
         <div class="container">
             <div class="Bonequinha">
                 <img src="../img/LOGIN/Bonequinha1.png" alt="">
@@ -22,23 +21,23 @@
                 <form action="" class="form">
                     <form>
                         <div class="form-group">
-                            <label for="nome">Usuario</label>
                             <input 
                                 type="text" 
                                 id="nome" 
                                 class="input-nome" 
                                 required 
                                 pattern="[A-Za-À-ú-z0-9\s]+"
+                                placeholder="Usuario"
                             >
                         </div>
                         <div class="form-group">
-                            <label for="nome">Senha</label>
                             <input 
                                 type="password" 
                                 id="password" 
                                 class="input-password" 
                                 required 
                                 pattern="[A-Za-À-ú-z0-9\s]+"
+                                placeholder="Senha"
                             >
                         </div>
                         <div class="form-group">
