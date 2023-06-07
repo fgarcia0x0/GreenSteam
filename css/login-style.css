@@ -1,0 +1,175 @@
+@import './colors.css';
+
+@media screen and (max-width:700px){
+    .lolli{
+        display: none;
+    }
+    
+}
+
+.custom-body 
+{
+    font-family: 'Raleway';
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.navbar-logo
+{
+    background-color: var(--background-navbar-login);
+    border-bottom: 1px solid var(--border-inside-navbar);
+}
+
+.container-form
+{
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 10%;
+    display: flex;
+}
+
+.lolli
+{
+    position: relative;
+    top: -2.7em;
+    left: 2.7em;
+    z-index: 1;
+}
+
+.content-form
+{
+    width: 643px;
+    height: 362px;
+    top: 272px;
+    left: 390px;
+    background-color: var(--navbar-login);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px var(--border-inside-navbar);
+}
+
+.title-login
+{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+
+    color: var(--heading);
+}
+
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    width: 400px;
+}
+
+.form-group input
+{
+    height:30px;
+
+    border: none;
+    border-bottom: 2px solid var(--border-inside-navbar);
+    border-radius: 4px 4px 0px 0px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+}
+
+.form-group input:hover
+{
+    border-bottom: 1px solid var(--text-green);
+}
+
+.form-group input[type="text"]:focus, .form-group input[type="password"]:focus
+{
+    outline: none;
+}
+
+.text-create-account
+{
+    font-size: 0.9em;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px; 
+}
+
+.create-account
+{
+    color: var(--text-green);
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+}
+
+.create-account:hover
+{
+    color: var(--button-hover-login);
+    cursor: pointer;
+}
+
+#form
+{
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 40px;
+    background: var(--background-card-login);
+    box-shadow: 0px 0px 10px 5px var(--border-inside-navbar);
+    border-radius: 10px;
+    
+}
+
+.form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input-group
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    color: var(--background-card-login);
+}
+
+.input-nome, .input-password
+{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--background-input);
+    width: 100%;
+    max-width: 527px;
+}
+
+input[type="submit"] 
+{
+    background-color: var(--background-card-login);
+    border: none;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid var(--border-inside-button);
+    width: 136px;
+    height: 53px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 20px;
+    color: var(--heading);
+    
+    cursor: pointer;    
+}
+
+input[type="submit"]:hover 
+{
+    background: var(--text-green);
+    transition: 400ms;
+}
