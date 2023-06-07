@@ -1,22 +1,157 @@
-#top-bar {
-    height: 100px;
-    background-color: #C8C8C8;
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-#top-bar #logo {
-    height: 50%;
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+html, body {
+    box-sizing: border-box;
+    background-color: white;
+}
+
+:root {
+    --background-color: white;
+    --text-color: rgb(30, 30, 30);
+    --text-hover-color: rgb(30, 30, 30);
+    --text-active-color: white;
+    --unfocosed-color: #C8C8C8;
+
+    --accent-color: rgb(105, 56, 252);
+    --hover-color: rgba(0, 0, 0, 0.1);
+    --transparent-color: rgb(0, 0, 0, 0);
+    --line-size: 1px;
+}
+
+.parent-container {
+    position: relative;
+}
+
+.gs-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 15vsh;
+    background-color: #EFEFEF;
+}
+
+.gs-header img {
+    width: 15%;
+}
+
+.center_div {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    flex-direction: column;
+    align-items: center;
 }
 
-#top-bar #menu {
-    height: 50%;
+.full-tab-menu {
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: var(--line-size) solid var(--unfocosed-color);
+    user-select: none;
+}
+  
+.tab-menu li,
+.full-tab-menu li {
+    display: inline-block;
+    transition: background-color 0.25s ease-in-out;
+    position: relative;
+    font-family: 'Futura PT';
+    font-weight: 400;
+    font-size: 25px;
+    cursor: default;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.tab-menu li:hover,
+.full-tab-menu li:hover {
+    background-color: var(--hover-color);
+}
+
+/* .tab-menu li:hover::after { 
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: #6938FC;
+} */
+
+.tab-menu nav,
+.full-tab-menu nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.tab-menu li.active,
+.full-tab-menu li.active {
+    display: inline-block;
+    position: relative;
+    background-color: var(--transparent-color);
+}
+
+.tab-menu li.active::after,
+.full-tab-menu li.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -var(--line-size);
+    width: 100%;
+    height: var(--line-size);
+    transition: position 0.25s ease-in-out;
+    background-color: var(--hover-color);
+}
+  
+.tab-menu a,
+.full-tab-menu a {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.tab-menu li:hover::after,
+.tab-menu li.active::after,
+.full-tab-menu li:hover::after,
+.full-tab-menu li.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -var(--line-size);
+    width: 100%;
+    height: var(--line-size);
+    background-color: var(--accent-color);
+    transition: transform 0.15s ease-in-out;
+    transform-origin: center;
+}
+
+.tab-menu li:hover::after,
+.full-tab-menu li:hover::after {
+    transform: scaleX(0);
+}
+
+.tab-menu li.active::after,
+.full-tab-menu li.active::after {
+    transform: scaleX(1);
+}
+
+.tab-menu li i,
+.full-tab-menu li i {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-#top-bar h1, #top-bar p {
-    margin: 0;
 }
