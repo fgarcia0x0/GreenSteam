@@ -1,0 +1,14 @@
+/* Colors */
+:root
+{
+    --background: #EFEFEF;
+    --background-input: #EFEFEF;
+    --background-card-login: #FFFFFF;
+    --background-navbar-login: #FFFFFF;
+    --border-inside-button: #D9D9D9;
+    --border-inside-navbar: #C8C8C8;
+    --button-hover-login: #27ae60;
+    --heading: #000000;
+    --text-green: #009A49;
+    --label-input: #969696;
+}
