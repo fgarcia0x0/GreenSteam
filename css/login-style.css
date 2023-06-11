@@ -1,18 +1,16 @@
 @import './colors.css';
-
+/* @font-face {
+    font-family: 'Raleway';
+    src: url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+    
+}
+ */
+ 
 @media screen and (max-width:700px){
-    .lolli{
+    .lolli, .lolli2{
         display: none;
     }
     
-}
-
-.custom-body 
-{
-    font-family: 'Raleway';
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background);
 }
 
 .navbar-logo
@@ -21,20 +19,47 @@
     border-bottom: 1px solid var(--border-inside-navbar);
 }
 
+.custom-body 
+{
+    font-family: 'Raleway';
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    /* display: flex; */
+    position: relative;
+}
+#main{
+    padding: 0px;
+    margin-top: 5%;
+    
+/*   background-color: violet;
+ */}
+
+
 .container-form
 {
     max-width: 600px;
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 0%;
     display: flex;
 }
 
 .lolli
 {
     position: relative;
-    top: -2.7em;
-    left: 2.7em;
+    top: 1.2em;
+    left: 2.65em; 
     z-index: 1;
+    float: left;
+}
+.lolli2
+{
+    visibility: hidden;
+    position: relative;
+    top: 1.2em;
+    left: -2.65em; 
+    z-index: 1;
+    float: left;
 }
 
 .content-form
@@ -42,15 +67,12 @@
     width: 643px;
     height: 362px;
     top: 272px;
-    left: 390px;
-    background-color: var(--navbar-login);
-    border-radius: 10px;
-    box-shadow: 0 0 10px 5px var(--border-inside-navbar);
+    left: 390px;   
 }
 
 .title-login
 {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 40px;
     line-height: 47px;
@@ -66,6 +88,7 @@
     align-items: center;
     margin: 10px 0;
     width: 400px;
+    
 }
 
 .form-group input
@@ -78,20 +101,20 @@
 
     font-family: 'Raleway';
     font-style: normal;
+    
 }
-
-.form-group input:hover
-{
-    border-bottom: 1px solid var(--text-green);
+.form-group input[type="submit"]{
+    font-family: 'Raleway', sans-serif;
 }
-
 .form-group input[type="text"]:focus, .form-group input[type="password"]:focus
 {
     outline: none;
+    border-bottom: 2px solid var(--text-green);
 }
 
 .text-create-account
 {
+    font-family: 'Raleway', sans-serif;
     font-size: 0.9em;
     width: 100%;
     text-align: center;
@@ -122,6 +145,8 @@
     background: var(--background-card-login);
     box-shadow: 0px 0px 10px 5px var(--border-inside-navbar);
     border-radius: 10px;
+/*     background-color: blue;
+ */    
     
 }
 
