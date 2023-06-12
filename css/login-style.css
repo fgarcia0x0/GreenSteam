@@ -25,7 +25,8 @@
 #main
 {
     padding: 0px;
-    margin-top: 5%;   
+    margin-top: 5%; 
+   /*  background-color: yellowgreen; */
 }
 
 
@@ -40,8 +41,8 @@
 .lolli
 {
     position: relative;
-    top: 1.2em;
-    left: 2.65em; 
+    top: -0.1em;
+    left: 2.74em; 
     z-index: 1;
     float: left;
 }
@@ -50,7 +51,7 @@
 {
     visibility: hidden;
     position: relative;
-    top: 1.2em;
+    top: -0.1em;
     left: -2.65em; 
     z-index: 1;
     float: left;
@@ -58,10 +59,6 @@
 
 .content-form
 {
-    /* width: 643px;
-    height: 362px;
-    top: 272px;
-    left: 390px;    */
     max-width: 100%;
     background-color: var(--bg-navbar-login);
     border-radius: 10px;
@@ -79,7 +76,6 @@
     font-size: 40px;
     line-height: 47px;
     text-align: center;
-
     color: var(--heading);
 }
 
@@ -124,6 +120,7 @@
     width: 100%;
     text-align: center;
     padding-top: 25px; 
+    padding-top: 38px;
 }
 
 .create-account
@@ -155,7 +152,9 @@
     padding-bottom: 40px;
     background: var(--bg-card-login);
     box-shadow: 0px 0px 10px 5px var(--border-inside-navbar);
-    border-radius: 10px;    
+    border-radius: 10px; 
+    /* background-color:aqua;  */  
+    
 }
 
 .form
@@ -181,7 +180,7 @@
     border-radius: 5px;
     border: 1px solid var(--bg-input);
     width: 100%;
-    max-width: 527px;
+    /* background-color: violet; */
 }
 
 input[type="submit"] 
