@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="../css/login-style.css">
     <link rel="stylesheet" href="../css/colors.css">
     
+    <!-- JQuery -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    
+    <!-- Link do Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
@@ -29,16 +35,17 @@
             <div id="form" class="card">
                 <h2 class="title-login">Criar Conta</h2>
                 <div class="card-body">
-                    <form action="" class="form">
+                    <form action="" id="account-form" class="form">
                         <div class="form-group mb-3">
                             <input 
                                 type="email" 
-                                id="nome" 
-                                class="input-nome" 
-                                required 
-                                pattern="[A-Za-z0-9\s]+"
+                                id="email"
+                                name="email"
+                                class="input-email"
+                                pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
                                 placeholder="Email"
                             >
+                            <span class="error-message" style="display: none;">Email inválido</span>
                         </div>
                         <div class="form-group mb-3">
                             <input 
@@ -48,6 +55,7 @@
                                 required 
                                 pattern="[A-Za-À-ú-z0-9\s]+"
                                 placeholder="Usuario"
+                                minlength="4"
                             >
                         </div>
                         <div class="form-group mb-3">
@@ -55,26 +63,33 @@
                                 type="password" 
                                 id="password" 
                                 class="input-password" 
-                                required 
-                                pattern="[A-Za-À-ú-z0-9\s]+"
+                                required
                                 placeholder="Senha"
+                                minlength="6"
                             >
+                            
                         </div>
+
+                        <div class="checkbox-wrapper">
+                            
+                            <label for="checkbox-terms" class="checkbox-label">
+                                <input type="checkbox" id="accept-terms" class="input-checkbox" required>
+                                Eu aceito os
+                                <a href="login.html" class="create-account">termos</a> 
+                                da plataforma green steam 
+                            </label>
+                        </div>
+                       
                         <div class="form-group">
-                            <input type="submit" value="Cadastrar" class="cadastrar btn">
+                            <input type="submit" value="Criar Conta" class="create btn">
                         </div>
                     </form>
-                    <div class="text-create-account">
-                        <span>
-                            Eu aceito os 
-                            <a href="login.html" class="create-account">termos</a> 
-                            da plataforma green steam </span>
-                    </div>
                 </div>
-                
             </div>
         </div>
     </div>
+    
+    <script src="../js/script.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
