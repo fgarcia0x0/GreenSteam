@@ -1,11 +1,5 @@
 @import './colors.css';
-/* @font-face {
-    font-family: 'Raleway';
-    src: url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
-    
-}
- */
- 
+
 @media screen and (max-width:700px){
     .lolli, .lolli2{
         display: none;
@@ -15,7 +9,7 @@
 
 .navbar-logo
 {
-    background-color: var(--background-navbar-login);
+    background-color: var(--bg-navbar-login);
     border-bottom: 1px solid var(--border-inside-navbar);
 }
 
@@ -24,16 +18,15 @@
     font-family: 'Raleway';
     justify-content: center;
     align-items: center;
-    background-color: var(--background);
-    /* display: flex; */
+    background-color: var(--bg);
     position: relative;
 }
-#main{
+
+#main
+{
     padding: 0px;
-    margin-top: 5%;
-    
-/*   background-color: violet;
- */}
+    margin-top: 5%;   
+}
 
 
 .container-form
@@ -52,6 +45,7 @@
     z-index: 1;
     float: left;
 }
+
 .lolli2
 {
     visibility: hidden;
@@ -64,10 +58,18 @@
 
 .content-form
 {
-    width: 643px;
+    /* width: 643px;
     height: 362px;
     top: 272px;
-    left: 390px;   
+    left: 390px;    */
+    max-width: 100%;
+    background-color: var(--bg-navbar-login);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px var(--border-inside-navbar);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .title-login
@@ -87,13 +89,12 @@
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
-    width: 400px;
-    
+    width: 400px;  
 }
 
 .form-group input
 {
-    height:30px;
+    height: 30px;
 
     border: none;
     border-bottom: 2px solid var(--border-inside-navbar);
@@ -103,13 +104,17 @@
     font-style: normal;
     
 }
-.form-group input[type="submit"]{
+.form-group input[type="submit"]
+{
     font-family: 'Raleway', sans-serif;
 }
-.form-group input[type="text"]:focus, .form-group input[type="password"]:focus
+
+.form-group input[type="text"]:focus, 
+.form-group input[type="password"]:focus, 
+.form-group input[type="email"]:focus
 {
     outline: none;
-    border-bottom: 2px solid var(--text-green);
+    border-bottom: 2px solid var(--text-hover);
 }
 
 .text-create-account
@@ -123,16 +128,22 @@
 
 .create-account
 {
-    color: var(--text-green);
-    text-decoration: none;
+    color: var(--text-hover);
+    text-decoration: underline;
     font-family: 'Raleway';
     font-style: normal;
 }
 
 .create-account:hover
 {
-    color: var(--button-hover-login);
+    color: var(--btn-hover-login);
     cursor: pointer;
+}
+
+.create
+{
+    position: relative;
+    top: 20px;
 }
 
 #form
@@ -142,12 +153,9 @@
     margin: 0 auto;
     padding: 30px;
     padding-bottom: 40px;
-    background: var(--background-card-login);
+    background: var(--bg-card-login);
     box-shadow: 0px 0px 10px 5px var(--border-inside-navbar);
-    border-radius: 10px;
-/*     background-color: blue;
- */    
-    
+    border-radius: 10px;    
 }
 
 .form
@@ -164,14 +172,14 @@
     justify-content: center;
     align-items: center;
     margin: 10px 0;
-    color: var(--background-card-login);
+    color: var(--bg-card-login);
 }
 
-.input-nome, .input-password
+.input-nome, .input-password, .input-email
 {
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid var(--background-input);
+    border: 1px solid var(--bg-input);
     width: 100%;
     max-width: 527px;
 }
@@ -195,6 +203,51 @@ input[type="submit"]
 
 input[type="submit"]:hover 
 {
-    background: var(--text-green);
+    background: var(--text-hover);
     transition: 400ms;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--bg);
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--border-inside-button);
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center;
+
+}
+
+input[type="checkbox"]::before 
+{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--text-hover);
+}
+
+input[type="checkbox"]:checked::before 
+{
+    transform: scale(1);
+    background-color: var(--bg);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbox-label 
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: justify;
+    color: var(--label-input);
+    justify-content: left;
+    line-height: 1.1;
+    display: inline-flex;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
 }
