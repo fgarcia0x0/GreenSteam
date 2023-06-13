@@ -26,7 +26,6 @@
 {
     padding: 0px;
     margin-top: 5%; 
-   /*  background-color: yellowgreen; */
 }
 
 
@@ -152,9 +151,7 @@
     padding-bottom: 40px;
     background: var(--bg-card-login);
     box-shadow: 0px 0px 10px 5px var(--border-inside-navbar);
-    border-radius: 10px; 
-    /* background-color:aqua;  */  
-    
+    border-radius: 10px;  
 }
 
 .form
@@ -180,7 +177,6 @@
     border-radius: 5px;
     border: 1px solid var(--bg-input);
     width: 100%;
-    /* background-color: violet; */
 }
 
 input[type="submit"] 
@@ -240,13 +236,14 @@ input[type="checkbox"]:checked::before
 .checkbox-label 
 {
     font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-align: justify;
     color: var(--label-input);
     justify-content: left;
     line-height: 1.1;
     display: inline-flex;
+    align-items: center;
     grid-template-columns: 1em auto;
     gap: 0.5em;
 }

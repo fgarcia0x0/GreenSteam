@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-logo">
         <div class="container d-flex justify-content-center">
             <a class="navbar-brand" href="#">
-                <img src="../assets/logo.svg" alt="Bootstrap" width="254" height="54">
+                <img src="../assets/logo.svg" alt="Logo Green Steam" width="254" height="54">
             </a>
         </div>
     </nav>
@@ -32,9 +32,10 @@
             <div id="form" class="card">
                 <h2 class="title-login">CADASTRAR</h2>
                 <div class="card-body">
-                    <form action="" id="account-form" >
-                        <div class="form-group mb-3">
-                            <input 
+                    <form action="" id="account-form" class="form text-center">
+                        <div class="form-group">
+                            <div class="col-sm-12 col-10">
+                                <input 
                                 type="email" 
                                 id="email"
                                 name="email"
@@ -42,10 +43,12 @@
                                 pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
                                 placeholder="Email"
                             >
-                            <span class="error-message" style="display: none;">Email inválido</span>
+                            </div>
                         </div>
-                        <div class="form-group mb-3">
-                            <input 
+
+                        <div class="form-group">
+                            <div class="col-sm-12 col-10">
+                                <input 
                                 type="text" 
                                 id="nome" 
                                 class="input-nome" 
@@ -54,9 +57,12 @@
                                 placeholder="Usuario"
                                 minlength="4"
                             >
+                            </div>
                         </div>
-                        <div class="form-group mb-3">
-                            <input 
+
+                        <div class="form-group">
+                            <div class="col-sm-12 col-10">
+                                <input 
                                 type="password" 
                                 id="password" 
                                 class="input-password" 
@@ -64,21 +70,25 @@
                                 placeholder="Senha"
                                 minlength="6"
                             >
-                            
+                            </div>
                         </div>
 
                         <div class="checkbox-wrapper">
-                            
                             <label for="checkbox-terms" class="checkbox-label">
                                 <input type="checkbox" id="accept-terms" class="input-checkbox" required>
-                                Eu aceito os
-                                <a href="login.html" class="create-account">termos</a> 
-                                da plataforma green steam 
+                                <span class="">
+                                    Eu aceito os
+                                    <a href="login.html" class="create-account">termos</a> 
+                                    da plataforma green steam 
+                                </span>
+                                
                             </label>
                         </div>
-                       
+
                         <div class="form-group">
-                            <input type="submit" value="Cadastrar" class="create btn">
+                            <div class="col-sm-12 col-10">
+                                <input type="submit" value="Cadastrar" class="create btn">
+                            </div>
                         </div>
                     </form>
                 </div>
