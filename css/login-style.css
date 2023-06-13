@@ -1,7 +1,7 @@
 @import './colors.css';
 
 @media screen and (max-width:700px){
-    .lolli, .lolli2{
+    .loli, .loli2{
         display: none;
     }
     
@@ -37,7 +37,7 @@
     display: flex;
 }
 
-.lolli
+.loli
 {
     position: relative;
     top: -0.1em;
@@ -46,7 +46,7 @@
     float: left;
 }
 
-.lolli2
+.loli2
 {
     visibility: hidden;
     position: relative;
@@ -68,7 +68,7 @@
     box-sizing: border-box;
 }
 
-.title-login
+.title-login, .title-register
 {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -76,6 +76,11 @@
     line-height: 47px;
     text-align: center;
     color: var(--heading);
+}
+
+.title-login
+{
+    margin-top: 12px;
 }
 
 .form-group
