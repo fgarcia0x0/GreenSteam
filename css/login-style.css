@@ -1,0 +1,254 @@
+@import './colors.css';
+
+@media screen and (max-width:700px){
+    .loli, .loli2{
+        display: none;
+    }
+    
+}
+
+.navbar-logo
+{
+    background-color: var(--bg-navbar-login);
+    border-bottom: 1px solid var(--border-inside-navbar);
+}
+
+.custom-body 
+{
+    font-family: 'Raleway';
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    position: relative;
+}
+
+#main
+{
+    padding: 0px;
+    margin-top: 5%; 
+}
+
+
+.container-form
+{
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 0%;
+    display: flex;
+}
+
+.loli
+{
+    position: relative;
+    top: -0.1em;
+    left: 2.74em; 
+    z-index: 1;
+    float: left;
+}
+
+.loli2
+{
+    visibility: hidden;
+    position: relative;
+    top: -0.1em;
+    left: -2.65em; 
+    z-index: 1;
+    float: left;
+}
+
+.content-form
+{
+    max-width: 100%;
+    background-color: var(--bg-navbar-login);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px var(--border-inside-navbar);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.title-login, .title-register
+{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: var(--heading);
+}
+
+.title-login
+{
+    margin-top: 12px;
+}
+
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    width: 400px;  
+}
+
+.form-group input
+{
+    height: 30px;
+
+    border: none;
+    border-bottom: 2px solid var(--border-inside-navbar);
+    border-radius: 4px 4px 0px 0px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    
+}
+.form-group input[type="submit"]
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-group input[type="text"]:focus, 
+.form-group input[type="password"]:focus, 
+.form-group input[type="email"]:focus
+{
+    outline: none;
+    border-bottom: 2px solid var(--text-hover);
+}
+
+.text-create-account
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px; 
+    padding-top: 38px;
+}
+
+.create-account
+{
+    color: var(--text-hover);
+    text-decoration: underline;
+    font-family: 'Raleway';
+    font-style: normal;
+}
+
+.create-account:hover
+{
+    color: var(--btn-hover-login);
+    cursor: pointer;
+}
+
+.create
+{
+    position: relative;
+    top: 20px;
+}
+
+#form
+{
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 40px;
+    background: var(--bg-card-login);
+    box-shadow: 0px 0px 10px 5px var(--border-inside-navbar);
+    border-radius: 10px;  
+}
+
+.form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input-group
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    color: var(--bg-card-login);
+}
+
+.input-nome, .input-password, .input-email
+{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--bg-input);
+    width: 100%;
+}
+
+input[type="submit"] 
+{
+    background-color: var(--background-card-login);
+    border: none;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid var(--border-inside-button);
+    width: 136px;
+    height: 53px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 20px;
+    color: var(--heading);
+    
+    cursor: pointer;    
+}
+
+input[type="submit"]:hover 
+{
+    background: var(--text-hover);
+    transition: 400ms;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--bg);
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--border-inside-button);
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center;
+
+}
+
+input[type="checkbox"]::before 
+{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--text-hover);
+}
+
+input[type="checkbox"]:checked::before 
+{
+    transform: scale(1);
+    background-color: var(--bg);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbox-label 
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: justify;
+    color: var(--label-input);
+    justify-content: left;
+    line-height: 1.1;
+    display: inline-flex;
+    align-items: center;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
