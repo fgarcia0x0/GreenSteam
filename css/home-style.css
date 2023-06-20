@@ -1,0 +1,135 @@
+@import "./colors.css";
+
+.navbar-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.carousel-container
+{
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-body.dark-mode
+{
+    background-color: var(--bg-dark-mode);
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.carousel-wrapper
+{
+    position: relative; 
+    width: 75%;
+    margin: 0 auto;
+}
+
+.carousel-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-item, .carousel-image
+{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+#arrow-box
+{
+    width: 5%;
+    height: 15%;
+    top: 40%;
+    background-color: #969696;
+    border-radius: 4px;
+}
+
+#arrow-box:hover
+{
+    background: rgba(0, 154, 73, 0.16);
+}
+
+#arrow-icon
+{
+    position: absolute;
+    color: blue;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: all 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+}
+
+#arrow-icon:hover
+{
+    transform: scale(1.5);
+    transition: 200ms;
+}
+
+.carousel-custom-indicators 
+{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.carousel-custom-indicators button 
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--bg-light-mode-indicator);
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.carousel-custom-indicators button.active 
+{
+    background-color: var(--color-btn-icon-carousel);
+}
+
+.carousel-indicators-wrapper 
+{
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.carousel-custom-indicators {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.carousel-custom-indicators li 
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-custom-indicators .active 
+{
+    background-color: #333;
+}
