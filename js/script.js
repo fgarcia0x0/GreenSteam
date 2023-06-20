@@ -23,7 +23,7 @@ function create_toggle_theme_event()
     modeToggleBtn.addEventListener('click', () => {
         var root = document.documentElement;
         var isDarkMode = root.classList.contains('dark-mode');
-
+        
         if (isDarkMode) {
             icon.className = 'fas fa-moon';
             root.classList.remove('dark-mode');
