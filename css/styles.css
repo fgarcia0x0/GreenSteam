@@ -93,7 +93,7 @@ a:link, a:visited {
     margin: 0;
     padding: 0;
 }
-  
+
 .tab-menu li,
 .full-tab-menu li {
     display: inline-block;
@@ -147,7 +147,7 @@ a:link, a:visited {
     transition: position 0.25s ease-in-out;
     background-color: var(--gs-hover-color);
 }
-  
+
 .tab-menu a,
 .full-tab-menu a {
     display: flex;
@@ -529,7 +529,7 @@ input[type="checkbox"]
 {
     display: none;
 }
-  
+
 input[type="checkbox"] {
     appearance: none;
     background-color: var(--gs-header-backg-color);
@@ -614,25 +614,25 @@ input[type="checkbox"] + label {
 
 @media (max-width: 600px)
 {
-   .gs-header-brand {
+    .gs-header-brand {
         width: calc(14.3rem / 2);
-   }
+    }
 
-   .gs-header-icon-button {
+    .gs-header-icon-button {
         width: calc(60px / 2);
         height: calc(50px / 2);
-   }
+    }
 
-   #theme-toggle-icon, 
-   #core-profile-toggle {
+    #theme-toggle-icon, 
+    #core-profile-toggle {
+            font-size: 1rem;
+    }
+
+    .full-tab-menu li {
         font-size: 1rem;
-   }
+    }
 
-   .full-tab-menu li {
-        font-size: 1rem;
-   }
-
-   .gs-main-search-box {
+    .gs-main-search-box {
         width: 21rem; 
         height: 2.3rem; 
         font-size: 1rem;
@@ -674,32 +674,36 @@ input[type="checkbox"] + label {
         left: 10%;
         width: 40vw;
     }
+    
+    .full-tab-menu li {
+            font-size: 1rem;
+    }
 }
 
 @media (max-width: 320px)
 {
-   .gs-header-brand {
-        width: calc(14.3rem / 2);
-   }
+    .gs-header-brand {
+            width: calc(14.3rem / 2);
+    }
 
-   .gs-flex-container {
-        justify-content: center;
-   }
+    .gs-flex-container {
+            justify-content: center;
+    }
 
-   .gs-header-icon-button {
-        display: none;
-   }
+    .gs-header-icon-button {
+            display: none;
+    }
 
-   #theme-toggle-icon, 
-   #core-profile-toggle {
-        font-size: 0.5rem;
-   }
+    #theme-toggle-icon, 
+    #core-profile-toggle {
+            font-size: 0.5rem;
+    }
 
-   .full-tab-menu li {
-        font-size: 0.5rem;
-   }
+    .full-tab-menu li {
+            font-size: 0.5rem;
+    }
 
-   .order-by-box-text-bottom
+    .order-by-box-text-bottom
     {
         display: none;
     }
@@ -725,5 +729,10 @@ input[type="checkbox"] + label {
     {
         left: 10%;
         width: 60vw;
+    }
+
+    .full-tab-menu li 
+    {
+            font-size: 0.5rem;
     }
 }
