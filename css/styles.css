@@ -4,10 +4,13 @@
     --gs-page-backg-color: white;
     --gs-text-color: black;
     --gs-text-hover-color: black;
+    --gs-text-unfocused-color: rgb(180, 180, 180);
     --gs-text-active-color: white;
     --gs-unfocosed-color: rgb(200, 200, 200);
     --gs-accent-color: rgb(0, 154, 73);
     --gs-hover-color: rgba(0, 0, 0, 0.05);
+    --gs-icon-color: rgba(66, 66, 66);
+    --gs-icon-hover-color: rgba(36, 36, 36);
     --gs-line-size: 1px;
 }
 
@@ -15,18 +18,24 @@
     --gs-header-backg-color: rgb(50, 50, 50);
     --gs-page-backg-color: rgb(30, 30, 30);
     --gs-text-color: rgb(200, 200, 200);
+    --gs-icon-color: rgba(200, 200, 200);
+    --gs-icon-hover-color: rgba(220, 220, 220);
     --gs-text-hover-color: rgb(200, 200, 200);
     --gs-text-active-color: white;
     --gs-unfocosed-color: rgb(100, 100, 100);
     --gs-hover-color: rgba(255, 255, 255, 0.05);
     --gs-accent-color: rgb(0, 154, 73);
+    --gs-text-unfocused-color: rgb(180, 180, 180);
     --gs-line-size: 1px;
 }
 
 * {
     padding: 0;
     margin: 0;
+    border-color: transparent;
+    outline: none;
     list-style: none;
+    user-select: none;
 }
 
 img {
@@ -34,11 +43,10 @@ img {
     overflow: clip;
 }
 
-html {
+html, body {
     box-sizing: border-box;
     background-color: var(--gs-page-backg-color);
     color: var(--gs-text-color);
-    transition: background-color 0.2s linear, color 0.2s linear;
 }
 
 a:link, a:visited {
@@ -48,14 +56,24 @@ a:link, a:visited {
 
 .gs-parent-container {
     position: relative;
+    background-color: var(--gs-page-backg-color);
+    transition: background-color 0.2s linear, color 0.2s linear;
 }
 
 .gs-header {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
     background-color: var(--gs-header-backg-color);
+    z-index: 999;
+}
+
+.gs-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 1rem;
 }
 
 .gs-center-div {
@@ -86,8 +104,8 @@ a:link, a:visited {
     font-weight: 300;
     font-size: 2rem;
     cursor: default;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
 }
 
 .tab-menu li:hover,
@@ -133,10 +151,10 @@ a:link, a:visited {
 .tab-menu a,
 .full-tab-menu a {
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 3px;
-    padding-top: 3px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-bottom: 0.187rem;
+    padding-top: 0.187rem;
     text-decoration: none;
     color: var(--gs-text-color);
 }
@@ -174,7 +192,7 @@ a:link, a:visited {
 
 .icon-button {
 	background-color: var(transparent);
-    color: var(--gs-text-color);
+    color: var(--gs-icon-color);
 	border: 2px solid transparent;
     border-radius: 4px;
 	text-align: center;
@@ -195,7 +213,7 @@ a:link, a:visited {
 
 .icon-button:hover {
     background-color: var(--gs-hover-color);
-    color: var(--gs-text-hover-color);
+    color: var(--gs-icon-hover-color);
     transition: .5s;
 }
 
@@ -215,13 +233,6 @@ a:link, a:visited {
     width: 14.3rem;
 }
 
-.rightmost {
-    position: absolute;
-    top: 30%;
-    right: 0.625rem;
-    transform: translateY(-50%);
-}
-
 .gs-header-rigth-container {
     display : flex;
     flex-direction: row;
@@ -235,6 +246,7 @@ a:link, a:visited {
 }
 
 .gs-flex-container {
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -244,8 +256,188 @@ a:link, a:visited {
 }
 
 .gs-header-icon-button {
-    width: 60px;
-    height: 50px;
+    width: 3.75rem;
+    height: 3.125rem;
+}
+
+.gs-text-box {
+    color: var(--gs-text-color);
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    background-color: var(--gs-header-backg-color);
+    font-size: inherit; /* 1.25rem */
+    padding: 0.625rem 0.625rem 0.625rem 2.81rem;
+    border: none;
+    border-bottom: 2px solid var(--gs-unfocosed-color);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: inherit;
+    color: var(--gs-text-color);
+    height: inherit;
+}
+
+.gs-text-box:hover {
+    border-color: rgb(--gs-unfocosed-color);
+    transition: .1s;
+}
+
+.gs-text-box::placeholder {
+    color: var(--gs-text-unfocused-color);
+}
+
+.gs-text-box:focus {
+    border-color: var(--gs-accent-color);
+    transition: .1s;
+    outline: none;
+}
+
+.gs-main-search-box {
+    position: relative;
+    display: inline-block;
+    width: 50rem; 
+    height: 3.1rem; 
+    font-size: 1.5rem
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.625rem;
+    top: 40%;
+    transform: translateY(-40%);
+    color: var(--gs-icon-color);
+    font-size: 1.5rem;
+}
+
+.gs-card {
+    background-color: var(--gs-page-backg-color);
+    border: none;
+    width: 18.75rem;
+    height: 18rem;
+    position: relative;
+    overflow: visible;
+    /*box-shadow: 0px 2px 4px 1px rgba(0,0,0, 0.5);*/
+    box-shadow: 0 0 0.625rem black;
+    border-radius: 0.25rem;
+    user-select: none;
+}
+
+.gs-card:hover {
+    cursor: pointer;
+}
+
+.gs-card-top {
+    display: block;
+    width: 100%;
+    height: calc(18rem / 2);
+    overflow: hidden;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+.gs-card-top img {
+    transition: transform .3s;
+    transform-origin: center;
+    width: 18.75rem;
+    height: calc(18rem / 2);
+    display: block;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.gs-card-bottom {
+    position: relative;
+}
+
+.gs-card-bottom img {
+    width: 18.75rem;
+    height: calc(18rem / 2);
+    display: block;
+    border-radius: 0px 0px 0.25rem 0.25rem;
+    object-fit: cover;
+}
+
+.gs-card-text {
+    border-top: 0.125rem solid white;
+    backdrop-filter: blur(0.625rem);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    z-index: 2;
+    user-select: none; 
+}
+
+.gs-card:hover .gs-card-text { 
+    backdrop-filter: none;
+    background-color: white;
+    color: black; 
+}
+
+.gs-card:hover .gs-card-top img { 
+    transform: scale(1.2);
+}
+
+.gs-card-text h1 {
+    margin-left: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.gs-card-text h2 {
+    margin-left: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.gs-card-text p {
+    text-align: justify;
+    text-overflow: ellipsis;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.65rem;
+    margin-left: 0.25rem;
+    margin-right: 0.30rem;
+    margin-bottom: 0.25rem;
+}
+
+.gs-card-grid {
+    display: grid;
+    margin-top: 3.125rem;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem /* 300px */, max-content));
+    grid-gap: 2rem;
+    justify-content: center;
+}
+
+.gs-about-layout {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2016/10/sitesderrubados-pf.jpg); 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+.gs-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
 }
 
 @media (max-width: 600px)
@@ -267,6 +459,21 @@ a:link, a:visited {
    .full-tab-menu li {
         font-size: 1rem;
    }
+
+   .gs-main-search-box {
+        width: 21rem; 
+        height: 2.3rem; 
+        font-size: 1rem;
+    }
+
+    .gs-main-search-box > .gs-text-box {
+        padding-left: calc(2.81rem / 1.2);
+    }
+
+    .search-icon {
+        font-size: 1rem;
+        position: absolute;
+    }
 }
 
 @media (max-width: 320px)

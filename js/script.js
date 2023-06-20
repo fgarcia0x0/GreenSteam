@@ -33,7 +33,24 @@ function create_toggle_theme_event()
     });
 }
 
+function create_header_sticky()
+{
+    window.onscroll = () => {
+        // Get the page header
+        var page_header = document.getElementById("gs_page_header");
+        
+        // Get the offset position of the header
+        var sticky = page_header.offsetTop;
+
+        if (window.scrollY > sticky)
+            page_header.classList.add("gs-sticky");
+        else
+            page_header.classList.remove("gs-sticky");
+    };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     create_tab_active_event();
     create_toggle_theme_event();
+    create_header_sticky();
 });
