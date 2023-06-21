@@ -17,6 +17,11 @@
     align-items: center;
 }
 
+#carouselExampleIndicators
+{
+    position: relative;
+}
+
 #content-body.dark-mode
 {
     background-color: var(--bg-dark-mode);
@@ -52,40 +57,65 @@
     border-radius: 4px;
 }
 
-#arrow-box
+/* #arrow-box
 {
     width: 5%;
     height: 15%;
     top: 40%;
-    background-color: #969696;
+    background-color: var(--bg-btn-carousel);
     border-radius: 4px;
-}
+} */
 
-#arrow-box:hover
-{
-    background: rgba(0, 154, 73, 0.16);
-}
-
-#arrow-icon
+.arrow-box
 {
     position: absolute;
-    color: blue;
-    padding: 10px;
-    text-align: center;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transform: all 0.4s;
-    font-size: 1.7em;
-    margin-top: -5px;
+    width: 5%;
+    height: 15%;
+    margin: auto;
+    background-color: var(--bg-btn-carousel);
+    border-radius: 4px;
+    z-index: 10;
 }
 
-#arrow-icon:hover
+
+.arrow-box-left
 {
-    transform: scale(1.5);
-    transition: 200ms;
+    left: -30px !important;
 }
+
+.arrow-box-right
+{
+    right: -30px !important;
+}
+
+.arrow-box:hover
+{
+    background-color: var(--bg-btn-hover-carousel);
+}
+
+.arrow-icon
+{
+    position: absolute;
+    color: var(--color-btn-icon-carousel);
+    font-size: 2em;
+}
+
+.arrow-icon:hover
+{
+    position: absolute;
+    color: green;
+    text-decoration: none;
+}
+
+/* #arrow-icon
+{
+    position: absolute;
+    color: blue !important;
+} */
 
 .carousel-custom-indicators 
 {
@@ -108,7 +138,7 @@
 
 .carousel-custom-indicators button.active 
 {
-    background-color: var(--color-btn-icon-carousel);
+    background-color: var(--color-btn-icon-hover-carousel);
 }
 
 .carousel-indicators-wrapper 
