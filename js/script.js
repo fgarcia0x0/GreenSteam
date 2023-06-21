@@ -1,7 +1,7 @@
-function create_tab_active_event()
+function create_tab_active_event(event_tag)
 {
-    var tabMenus = document.querySelectorAll('.tab-menu li, .full-tab-menu li');
-    tabMenus.forEach(tab => 
+    var tabMenus = document.querySelectorAll(event_tag);
+    tabMenus.forEach(tab =>
     {
         tab.addEventListener('click', () => 
         {
@@ -72,7 +72,8 @@ function create_header_sticky()
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    create_tab_active_event();
+    create_tab_active_event('.full-tab-menu li');
+    create_tab_active_event('.gs-tab-menu li');
     create_toggle_theme_event();
     create_slide_carousel_event();
     create_header_sticky();
