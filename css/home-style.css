@@ -37,7 +37,7 @@
 .carousel-wrapper
 {
     position: relative; 
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -57,44 +57,35 @@
     border-radius: 4px;
 }
 
-/* #arrow-box
-{
-    width: 5%;
-    height: 15%;
-    top: 40%;
-    background-color: var(--bg-btn-carousel);
-    border-radius: 4px;
-} */
-
 .arrow-box
 {
     position: absolute;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5%;
-    height: 15%;
-    margin: auto;
-    background-color: var(--bg-btn-carousel);
+    width: 6% !important;
+    height: 17%;
+    margin: 7rem auto;
+    background-color: var(--bg-btn-carousel) !important;
     border-radius: 4px;
-    z-index: 10;
 }
-
 
 .arrow-box-left
 {
-    left: -30px !important;
+    left: 1% !important;
 }
 
 .arrow-box-right
 {
-    right: -30px !important;
+    right: 1% !important;
+}
+
+.arrow-box:hover
+.arrow-icon
+{
+    color: var(--color-btn-icon-hover-carousel) !important;
 }
 
 .arrow-box:hover
 {
-    background-color: var(--bg-btn-hover-carousel);
+    background-color: var(--bg-btn-hover-carousel) !important;
 }
 
 .arrow-icon
@@ -107,15 +98,8 @@
 .arrow-icon:hover
 {
     position: absolute;
-    color: green;
     text-decoration: none;
 }
-
-/* #arrow-icon
-{
-    position: absolute;
-    color: blue !important;
-} */
 
 .carousel-custom-indicators 
 {
