@@ -71,10 +71,11 @@ function create_header_sticky()
     };
 }
 
+create_header_sticky();
+
 document.addEventListener('DOMContentLoaded', () => {
     create_tab_active_event('.full-tab-menu li');
     create_tab_active_event('.gs-tab-menu li');
     create_toggle_theme_event();
     create_slide_carousel_event();
-    create_header_sticky();
 });
