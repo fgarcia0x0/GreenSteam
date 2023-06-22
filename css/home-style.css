@@ -17,6 +17,11 @@
     align-items: center;
 }
 
+#carouselExampleIndicators
+{
+    position: relative;
+}
+
 #content-body.dark-mode
 {
     background-color: var(--bg-dark-mode);
@@ -32,7 +37,7 @@
 .carousel-wrapper
 {
     position: relative; 
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -52,39 +57,48 @@
     border-radius: 4px;
 }
 
-#arrow-box
+.arrow-box
 {
-    width: 5%;
-    height: 15%;
-    top: 40%;
-    background-color: #969696;
+    position: absolute;
+    width: 6% !important;
+    height: 17%;
+    margin: 7rem auto;
+    background-color: var(--bg-btn-carousel) !important;
     border-radius: 4px;
 }
 
-#arrow-box:hover
+.arrow-box-left
 {
-    background: rgba(0, 154, 73, 0.16);
+    left: 1% !important;
 }
 
-#arrow-icon
+.arrow-box-right
+{
+    right: 1% !important;
+}
+
+.arrow-box:hover
+.arrow-icon
+{
+    color: var(--color-btn-icon-hover-carousel) !important;
+}
+
+.arrow-box:hover
+{
+    background-color: var(--bg-btn-hover-carousel) !important;
+}
+
+.arrow-icon
 {
     position: absolute;
-    color: blue;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transform: all 0.4s;
-    font-size: 1.7em;
-    margin-top: -5px;
+    color: var(--color-btn-icon-carousel);
+    font-size: 2em;
 }
 
-#arrow-icon:hover
+.arrow-icon:hover
 {
-    transform: scale(1.5);
-    transition: 200ms;
+    position: absolute;
+    text-decoration: none;
 }
 
 .carousel-custom-indicators 
@@ -108,7 +122,7 @@
 
 .carousel-custom-indicators button.active 
 {
-    background-color: var(--color-btn-icon-carousel);
+    background-color: var(--color-btn-icon-hover-carousel);
 }
 
 .carousel-indicators-wrapper 
