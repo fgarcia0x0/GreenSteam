@@ -12,6 +12,7 @@
     --gs-icon-color: rgba(66, 66, 66);
     --gs-icon-hover-color: rgba(36, 36, 36);
     --gs-line-size: 1px;
+    --gs-tab-menu-line-size: 2px;
 }
 
 .dark-mode {
@@ -27,6 +28,7 @@
     --gs-accent-color: rgb(0, 154, 73);
     --gs-text-unfocused-color: rgb(180, 180, 180);
     --gs-line-size: 1px;
+    --gs-tab-menu-line-size: 2px;
 }
 
 * {
@@ -69,17 +71,23 @@ a:link, a:visited {
     z-index: 999;
 }
 
+.gs-seperator {
+    height: 1rem;
+    background-color: var(--gs-page-backg-color);
+}
+
 .gs-content {
     position: relative;
     height: 100%;
     width: 100%;
-    top: 1rem;
+    background-color: var(--gs-page-backg-color);
 }
 
 .gs-center-div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: transparent;
 }
 
 .full-tab-menu {
@@ -586,6 +594,102 @@ input[type="checkbox"] + label {
     justify-content: center;   
 }
 
+.gs-tab-menu {
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gs-tab-menu li {
+    display: inline-block;
+    color: var(--gs-text-color);
+    background-color: var(--gs-header-backg-color);
+    position: relative;
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-size: 1.3rem;
+    cursor: default;
+    border-radius: 0.25rem;
+    margin-right: 0.40rem;
+    min-width: 11.25rem;
+}
+
+.gs-tab-menu li:hover {
+    background-color: rgba(0, 154, 73, 0.10);
+}
+
+.gs-tab-menu nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.gs-tab-menu li.active {
+    display: inline-block;
+    position: relative;
+    background-color: rgba(0, 154, 73, 0.16);
+    color: var(--gs-accent-color);
+    font-weight: bold;
+    border-radius: 0px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.gs-tab-menu li.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -var(--gs-tab-menu-line-size);
+    width: 100%;
+    height: var(--gs-tab-menu-line-size);
+    transition: position 0.25s ease-in-out;
+    background-color: var(--gs-hover-color);
+}
+
+.gs-tab-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 0.9375rem 0.625rem 0.9375rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.gs-tab-menu li:hover::after,
+.gs-tab-menu li.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -var(--gs-tab-menu-line-size);
+    width: 100%;
+    height: var(--gs-tab-menu-line-size);
+    background-color: var(--gs-accent-color);
+    transition: transform 0.15s ease-in-out;
+    transform-origin: center;
+}
+
+.gs-tab-menu li:hover::after {
+    transform: scaleX(0);
+}
+
+.gs-tab-menu li.active::after {
+    transform: scaleX(1);
+}
+
+.gs-tab-menu li i {
+    display: flex;
+    align-items: center;
+}
+
+.game-page-menu {
+    margin-bottom: 1.25rem;
+}
+
 @media (max-width: 1200px)
 {
     .order-by-button
@@ -630,6 +734,17 @@ input[type="checkbox"] + label {
 
     .full-tab-menu li {
         font-size: 1rem;
+    }
+
+    .gs-tab-menu li {
+        font-size: 0.7rem;
+        min-width: 0px;
+        max-width: 6.87rem;
+    }
+
+    .gs-tab-menu a {
+        padding-top: 0.40rem;
+        padding-bottom: 0.40rem;
     }
 
     .gs-main-search-box {
