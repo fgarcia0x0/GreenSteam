@@ -13,7 +13,7 @@ function game_desc_event ()
         case '1':
             gameImage.src = '../assets/covers/the-last-of-us-cover.svg';
             gameTitle.textContent = 'THE LAST OF US';
-            gameDescription.textContent = ' The Last of Us é um jogo de ação e aventura que apresenta uma história emocionante em um mundo devastado por uma pandemia. O protagonista, Joel, é contratado para tirar uma garota, Ellie, de uma zona de quarentena militar e essa simples tarefa se transforma em uma jornada brutal através do país. O jogo já ganhou mais de 200 prêmios de Jogo do Ano. Baixe via torrent o Jogo The Last of Us Part I completo para PC.';
+            gameDescription.textContent = 'The Last of Us é um jogo de ação e aventura que apresenta uma história emocionante em um mundo devastado por uma pandemia. O protagonista, Joel, é contratado para tirar uma garota, Ellie, de uma zona de quarentena militar e essa simples tarefa se transforma em uma jornada brutal através do país. O jogo já ganhou mais de 200 prêmios de Jogo do Ano. Baixe via torrent o Jogo The Last of Us Part I completo para PC.';
             gameDate.textContent = 'Data de Lançamento: 28 mar 2023';
             break;
         case '2':

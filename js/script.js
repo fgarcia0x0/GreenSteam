@@ -19,7 +19,6 @@ function create_toggle_theme_event()
     var modeToggleBtn = document.getElementById('theme-toggle');
     var icon = document.getElementById('theme-toggle-icon');
     var contentBody = document.getElementById('content-body');
-    var cardGame = document.getElementById('card-game');
 
     modeToggleBtn.addEventListener('click', () => {
         var root = document.documentElement;
@@ -36,7 +35,6 @@ function create_toggle_theme_event()
             root.classList.add('dark-mode');
             contentBody.classList.add('carousel-dark');
             contentBody.classList.add('dark-mode');
-            cardGame.classList.add('dark-mode');
         }
     });
 }
