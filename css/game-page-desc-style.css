@@ -33,7 +33,7 @@
 .card-game-image
 {
     flex: 1 0 auto;
-    overflow: hidden;
+    
     border-top-left-radius: 4px;
 }
 

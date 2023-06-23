@@ -74,9 +74,41 @@ function create_header_sticky()
 
 create_header_sticky();
 
-function redirectToGame (gameId)
+const imageMapping =
 {
-    window.location.href = '../game-page-desc.html?id=' + gameId;
+    '1': 'the-last-of-us',
+    '2': 'red-dead2',
+    '3': 'horizon',
+    '4': 'assassins-creed-valhalla',
+    '5': 'hogwarts',
+    '6': 're4-remake'
+};
+
+const dateMapping =
+{
+    '1': '28 mar 2023',
+    '2': '5 dez 2019',
+    '3': '7 ago 2020',
+    '4': '10 nov 2020',
+    '5': '10 fev 2023',
+    '6': '24 mar 2023',
+}
+
+function redirectToGame (card)
+{
+    const gameId = card.getAttribute('data-id');
+    const gameImage = '../assets/covers/' + imageMapping[gameId] + '-cover.svg';
+    const gameTitle = card.querySelector('.gs-card-text h1').textContent;
+    const gameDescription = card.querySelector('.gs-card-text p').textContent;
+    const gameDate = 'Data de Lançamento: ' + dateMapping[gameId];
+
+    localStorage.setItem('gameId', gameId);
+    localStorage.setItem('gameImage', gameImage);
+    localStorage.setItem('gameTitle', gameTitle);
+    localStorage.setItem('gameDescription', gameDescription);
+    localStorage.setItem('gameDate', gameDate);
+
+    window.location.href = '../game-page-desc.html';
 }
 
 document.addEventListener('DOMContentLoaded', () => {

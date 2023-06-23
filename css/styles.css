@@ -729,7 +729,7 @@ input[type="checkbox"] + label {
 
     #theme-toggle-icon, 
     #core-profile-toggle {
-            font-size: 1rem;
+        font-size: 1rem;
     }
 
     .full-tab-menu li {
@@ -791,7 +791,12 @@ input[type="checkbox"] + label {
     }
     
     .full-tab-menu li {
-            font-size: 1rem;
+        font-size: 1rem;
+    }
+    
+    .card-container
+    {
+
     }
 }
 
