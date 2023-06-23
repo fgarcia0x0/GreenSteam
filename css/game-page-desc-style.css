@@ -1,0 +1,66 @@
+@import "colors.css";
+@import "styles.css";
+
+@media (max-width: 767px) {
+    .card-game {
+      width: 100%; /* Largura responsiva para dispositivos móveis */
+    }
+}
+
+.card-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.card-game
+{
+    display: grid;
+    border: 2px solid var(--bg-btn-carousel);
+    border-radius: 4px;
+    align-items: start;
+    grid-template-columns: 10em 1fr;
+    grid-gap: 0.4em;
+    margin: 0 20em;
+    background-color: var(--bg);
+    flex-shrink: 0;
+    height: 14.3em;
+    width: 50em;
+}
+
+.card-game-image
+{
+    flex: 1 0 auto;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+}
+
+.card-game-image img 
+{
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.card-game-content
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-content: start;
+    padding: 10px;
+    flex: 0 1 auto;
+    margin-top: 10px;
+}
+
+.card-game-content h3
+{
+    margin: 0;
+    font-size: 2em;
+}
+
+.card-game-description
+{
+    font-size: 0.6em;
+    text-align: justify;
+    line-height: 2em;
+}

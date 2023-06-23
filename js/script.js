@@ -19,6 +19,7 @@ function create_toggle_theme_event()
     var modeToggleBtn = document.getElementById('theme-toggle');
     var icon = document.getElementById('theme-toggle-icon');
     var contentBody = document.getElementById('content-body');
+    var cardGame = document.getElementById('card-game');
 
     modeToggleBtn.addEventListener('click', () => {
         var root = document.documentElement;
@@ -29,11 +30,13 @@ function create_toggle_theme_event()
             root.classList.remove('dark-mode');
             contentBody.classList.remove('carousel-dark');
             contentBody.classList.remove('dark-mode');
+            cardGame.classList.remove('dark-mode');
         } else {
             icon.className = 'fas fa-sun';
             root.classList.add('dark-mode');
             contentBody.classList.add('carousel-dark');
             contentBody.classList.add('dark-mode');
+            cardGame.classList.add('dark-mode');
         }
     });
 }
@@ -72,6 +75,11 @@ function create_header_sticky()
 }
 
 create_header_sticky();
+
+function redirectToGame (gameId)
+{
+    window.location.href = '../game-page-desc.html?id=' + gameId;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     create_tab_active_event('.full-tab-menu li');
