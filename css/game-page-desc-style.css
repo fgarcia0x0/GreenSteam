@@ -7,6 +7,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .card-game
@@ -25,15 +26,24 @@
     
 }
 
-.card-game.dark-mode
+.card-game.dark-mode,
+.card-panel.dark-mode,
+.card-game-title.dark-mode,
+.pair-title.dark-mode,
+.pair-info.dark-mode
 {
     background-color: var(--gs-header-backg-color);
+    color: var(--gs-text-active-color);
+}
+
+.pair-info.dark-mode
+{
+    color: var(--gs-text-color);
 }
 
 .card-game-image
 {
     flex: 1 0 auto;
-    
     border-top-left-radius: 4px;
 }
 
@@ -68,7 +78,7 @@
 
 .card-game-description
 {
-    font-size: 0.7em;
+    font-size: 0.75rem;
     text-align: justify;
     line-height: 2em;
     color: var(-heading);

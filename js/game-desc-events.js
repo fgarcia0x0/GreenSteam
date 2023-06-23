@@ -5,7 +5,6 @@ function game_desc_event ()
     const gameDescriptionElement = document.querySelector('.card-game-description');
     const gameDateElement = document.querySelector('.card-game-date');
 
-    const gameId = localStorage.getItem('gameId');
     const gameImage = localStorage.getItem('gameImage');
     const gameTitle = localStorage.getItem('gameTitle');
     const gameDescription = localStorage.getItem('gameDescription');
@@ -15,7 +14,6 @@ function game_desc_event ()
     gameTitleElement.textContent = gameTitle;
     gameDateElement.textContent = gameDate;
     gameDescriptionElement.textContent = gameDescription;
-    
 }
 
 document.addEventListener('DOMContentLoaded', () => {

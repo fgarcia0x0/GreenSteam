@@ -19,6 +19,11 @@ function create_toggle_theme_event()
     var modeToggleBtn = document.getElementById('theme-toggle');
     var icon = document.getElementById('theme-toggle-icon');
     var contentBody = document.getElementById('content-body');
+    var cardGame = document.getElementById('card-game');
+    var panelGame = document.getElementById('card-panel');
+    var cardGameTitle = document.querySelector('.card-game-title');
+    var pairTitles = document.querySelectorAll('.pair-title');
+    var pairInfos = document.querySelectorAll('.pair-info');
 
     modeToggleBtn.addEventListener('click', () => {
         var root = document.documentElement;
@@ -30,11 +35,20 @@ function create_toggle_theme_event()
             contentBody.classList.remove('carousel-dark');
             contentBody.classList.remove('dark-mode');
             cardGame.classList.remove('dark-mode');
+            panelGame.classList.remove('dark-mode');
+            cardGameTitle.classList.remove('dark-mode');
+            pairTitles.forEach(title => title.classList.remove('dark-mode'));
+            pairInfos.forEach(info => info.classList.remove('dark-mode'));
         } else {
             icon.className = 'fas fa-sun';
             root.classList.add('dark-mode');
             contentBody.classList.add('carousel-dark');
             contentBody.classList.add('dark-mode');
+            cardGame.classList.add('dark-mode');
+            panelGame.classList.add('dark-mode');
+            cardGameTitle.classList.add('dark-mode');
+            pairTitles.forEach(title => title.classList.add('dark-mode'));
+            pairInfos.forEach(info => info.classList.add('dark-mode'));
         }
     });
 }
