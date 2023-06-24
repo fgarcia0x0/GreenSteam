@@ -68,11 +68,23 @@
 
 @media (width = 768px)
 {
+    .card-game
+    {
+        font-size: large;
+    }
+
     .card-panel
     {
-        max-width: 100%;
+        max-width: 90%;
         margin-left: 1em;
         margin-right: 1em;
+        font-size: larger;
+        padding-bottom: 7.5em !important;
+    }
+
+    .card-panel-content
+    {
+        font-size: large;
     }
 }
 
@@ -80,7 +92,7 @@
 {
     .card-panel
     {   
-        max-width: 81%;
+        max-width: 90%;
         font-size: small;
         justify-content: space-evenly;
         padding-left: 3.5em !important;
@@ -91,6 +103,20 @@
     .card-panel-content
     {
         font-size: large;
+    }
+}
+
+@media (width = 1024px)
+{
+    .card-game
+    {
+        font-size: large;
+    }
+
+    .card-panel
+    {
+        max-width: 88%;
+        font-size: small;
     }
 }
 
@@ -194,7 +220,7 @@
 
 .card-game-description
 {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-align: justify;
     line-height: 2em;
     color: var(-heading);
