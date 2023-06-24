@@ -1,13 +1,129 @@
 @import "colors.css";
 @import "styles.css";
 
+@media (max-width: 500px) 
+{
+    .card-game
+    {
+        max-width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: small;
+    }
+
+    .card-game-description
+    {
+        display: none;
+    }
+
+    .card-game-content
+    {
+        font-size: 1.2em;
+    }
+
+    .card-panel
+    {
+        max-width: 90%;
+        font-size: small;
+        padding-bottom: 11em !important;
+        justify-content: space-evenly;
+        align-self: center;
+    }
+
+    .card-game-date
+    {
+        font-size: 1.1rem;
+    }
+
+    .pair-title,
+    .pair-info
+    {
+        font-size: 0.1em;
+    }
+}
+
+@media (min-width: 650px)
+{
+    .card-game
+    {
+        max-width: 90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .card-panel
+    {
+        max-width: 90%;
+        font-size: small;
+        padding-bottom: 6em !important;
+        justify-content: space-evenly;
+        align-self: center;
+    }
+
+    .pair-title
+    {
+        padding-bottom: 0.2rem;
+    }
+}
+
+@media (width = 768px)
+{
+    .card-panel
+    {
+        max-width: 100%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+@media (min-width: 800px)
+{
+    .card-panel
+    {   
+        max-width: 81%;
+        font-size: small;
+        justify-content: space-evenly;
+        padding-left: 3.5em !important;
+        padding-right: 3.5em !important;
+        padding-bottom: 11.5em !important;
+    }
+
+    .card-panel-content
+    {
+        font-size: large;
+    }
+}
+
+@media (min-width: 1280px)
+{
+    .card-game
+    {
+        max-width: 100%;
+        font-size: large;
+    }
+
+    .card-panel
+    {
+        max-width: 100%;
+        font-size: xx-small;
+    }
+
+    .card-panel-content
+    {
+        font-size: medium;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
 .card-container
 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+    width: 100%;
+    margin: 0 auto;
 }
 
 .card-game
@@ -89,6 +205,7 @@
 {
 
     margin-top: 1em;
+    padding: 1em 1em;
     background-color: var(--bg);
     border: 2px solid var(--bg-btn-carousel);
     border-radius: 4px;
@@ -99,6 +216,12 @@
 .card-panel-content
 {
     flex-direction: row;
+}
+
+.card-panel-info .row
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .pair 

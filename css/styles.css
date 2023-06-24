@@ -718,46 +718,55 @@ input[type="checkbox"] + label {
 
 @media (max-width: 600px)
 {
-    .gs-header-brand {
+    .gs-header-brand 
+    {
         width: calc(14.3rem / 2);
     }
 
-    .gs-header-icon-button {
+    .gs-header-icon-button 
+    {
         width: calc(60px / 2);
         height: calc(50px / 2);
     }
 
     #theme-toggle-icon, 
-    #core-profile-toggle {
+    #core-profile-toggle 
+    {
         font-size: 1rem;
     }
 
-    .full-tab-menu li {
+    .full-tab-menu li 
+    {
         font-size: 1rem;
     }
 
-    .gs-tab-menu li {
+    .gs-tab-menu li 
+    {
         font-size: 0.7rem;
         min-width: 0px;
         max-width: 6.87rem;
     }
 
-    .gs-tab-menu a {
+    .gs-tab-menu a 
+    {
         padding-top: 0.40rem;
         padding-bottom: 0.40rem;
     }
 
-    .gs-main-search-box {
+    .gs-main-search-box 
+    {
         width: 21rem; 
         height: 2.3rem; 
         font-size: 1rem;
     }
 
-    .gs-main-search-box > .gs-text-box {
+    .gs-main-search-box > .gs-text-box 
+    {
         padding-left: calc(2.81rem / 1.2);
     }
 
-    .search-icon {
+    .search-icon 
+    {
         font-size: 1rem;
         position: absolute;
     }
@@ -766,6 +775,7 @@ input[type="checkbox"] + label {
     {
         display: none;
     }
+
     .order-by-box-text-top
     {
         display: none;
@@ -790,28 +800,27 @@ input[type="checkbox"] + label {
         width: 40vw;
     }
     
-    .full-tab-menu li {
-        font-size: 1rem;
-    }
-    
-    .card-container
+    .full-tab-menu li 
     {
-
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 320px)
 {
-    .gs-header-brand {
-            width: calc(14.3rem / 2);
+    .gs-header-brand 
+    {
+        width: calc(14.3rem / 2);
     }
 
-    .gs-flex-container {
-            justify-content: center;
+    .gs-flex-container 
+    {
+        justify-content: center;
     }
 
-    .gs-header-icon-button {
-            display: none;
+    .gs-header-icon-button 
+    {
+        display: none;
     }
 
     #theme-toggle-icon, 
@@ -853,6 +862,7 @@ input[type="checkbox"] + label {
 
     .full-tab-menu li 
     {
-            font-size: 0.5rem;
+        font-size: 0.5rem;
     }
+
 }
