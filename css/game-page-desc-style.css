@@ -217,6 +217,12 @@
     width: 50em;
 }
 
+.card-game.card-game.dark-mode,
+.card-panel.dark-mode
+{
+    border: 2px solid var(--gs-unfocosed-color);
+}
+
 .card-game.dark-mode,
 .card-panel.dark-mode,
 .card-game-title.dark-mode,
@@ -224,7 +230,7 @@
 .pair-info.dark-mode
 {
     background-color: var(--gs-header-backg-color);
-    color: var(--gs-text-active-color);
+    color: var(--gs-text-color);
 }
 
 .pair-info.dark-mode
@@ -269,11 +275,12 @@
 
 .card-game-description
 {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     text-align: justify;
     line-height: 2em;
     color: var(-heading);
     font-weight: lighter;
+    text-overflow: ellipsis;
 }
 
 .card-panel
