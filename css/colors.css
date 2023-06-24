@@ -18,21 +18,12 @@
     --bg-dark-mode:  rgb(30, 30, 30);
     --bg-light-mode-indicator: #D9D9D9;
     --color-btn-icon-carousel: #474646;
+    --color-btn-icon-hover-carousel: #009A49;
+
+    --bg-btn-download-games-desc: linear-gradient(180deg, #75B022 0%, #618134 99.99%, rgba(217, 217, 217, 0.00) 100%, #588A1B 100%);    --color-text-btn-download-games-desc: #FFFFFF;
+    --color-pair-info: #787878;
+
     --color-btn-icon-hover-carousel: #009A49
     --color-btn-icon-carousel: #009A49;
     --color-btn-more-games: #009A4916;
-}
-.dark-mode {
-    --gs-header-backg-color: rgb(50, 50, 50);
-    --gs-page-backg-color: rgb(30, 30, 30);
-    --gs-text-color: rgb(200, 200, 200);
-    --gs-icon-color: rgba(200, 200, 200);
-    --gs-icon-hover-color: rgba(220, 220, 220);
-    --gs-text-hover-color: rgb(200, 200, 200);
-    --gs-text-active-color: white;
-    --gs-unfocosed-color: rgb(100, 100, 100);
-    --gs-hover-color: rgba(255, 255, 255, 0.05);
-    --gs-accent-color: rgb(0, 154, 73);
-    --gs-text-unfocused-color: rgb(180, 180, 180);
-    --gs-line-size: 1px;
 }

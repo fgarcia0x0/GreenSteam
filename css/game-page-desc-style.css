@@ -1,0 +1,340 @@
+@import "colors.css";
+@import "styles.css";
+
+@media (max-width: 410px) 
+{
+    .card-game
+    {
+        max-width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: small;
+    }
+
+    .card-game-description
+    {
+        display: none;
+    }
+
+    .card-game-content
+    {
+        font-size: 1.2em;
+    }
+
+    .card-panel
+    {
+        max-width: 90%;
+        font-size: small;
+        padding-bottom: 11em !important;
+        justify-content: space-evenly;
+        align-self: center;
+    }
+
+    .card-game-date
+    {
+        font-size: 1.1rem;
+    }
+
+    .pair-title,
+    .pair-info
+    {
+        font-size: 0.1em;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 620px)
+{
+    .card-game
+    {
+        max-width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: small;
+    }
+
+    .card-game-description
+    {
+        display: none;
+    }
+
+    .card-game-content
+    {
+        font-size: 1.2em;
+    }
+
+    .card-panel
+    {
+        max-width: 90%;
+        font-size: small;
+        padding-bottom: 11em !important;
+        justify-content: space-evenly;
+        align-self: center;
+    }
+
+    .card-game-date
+    {
+        font-size: 1.1rem;
+    }
+
+    .pair-title,
+    .pair-info
+    {
+        font-size: 0.1em;
+    }
+}
+
+@media (min-width: 620px)
+{
+    .card-game
+    {
+        max-width: 90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .card-panel
+    {
+        max-width: 90%;
+        font-size: small;
+        padding-bottom: 6em !important;
+        justify-content: space-evenly;
+        align-self: center;
+    }
+
+    .pair-title
+    {
+        padding-bottom: 0.2rem;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 800px)
+{
+    .card-panel
+    {
+        padding-bottom: 10em !important;
+    }
+}
+
+@media (width = 768px)
+{
+    .card-game
+    {
+        font-size: large;
+    }
+
+    .card-panel
+    {
+        max-width: 90%;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-size: larger;
+        padding-bottom: 7.5em !important;
+    }
+
+    .card-panel-content
+    {
+        font-size: large;
+    }
+}
+
+@media (min-width: 800px)
+{
+    .card-panel
+    {   
+        max-width: 90%;
+        font-size: small;
+        justify-content: space-evenly;
+        padding-left: 3.5em !important;
+        padding-right: 3.5em !important;
+        padding-bottom: 11.5em !important;
+    }
+
+    .card-panel-content
+    {
+        font-size: large;
+    }
+}
+
+@media (width = 1024px)
+{
+    .card-game
+    {
+        font-size: large;
+    }
+
+    .card-panel
+    {
+        max-width: 88%;
+        font-size: small;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .card-game
+    {
+        max-width: 100%;
+        font-size: large;
+    }
+
+    .card-panel
+    {
+        max-width: 100%;
+        font-size: xx-small;
+        padding-bottom: 9em !important;
+    }
+
+    .card-panel-content
+    {
+        font-size: medium;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+.card-container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-game
+{
+    display: grid;
+    border: 2px solid var(--bg-btn-carousel);
+    border-radius: 4px;
+    align-items: start;
+    grid-template-columns: 10em 1fr;
+    grid-gap: 0.4em;
+    margin: 0 20em;
+    background-color: var(--bg);
+    flex-shrink: 0;
+    height: 14.3em;
+    width: 50em;
+}
+
+.card-game.card-game.dark-mode,
+.card-panel.dark-mode
+{
+    border: 2px solid var(--gs-unfocosed-color);
+}
+
+.card-game.dark-mode,
+.card-panel.dark-mode,
+.card-game-title.dark-mode,
+.pair-title.dark-mode,
+.pair-info.dark-mode
+{
+    background-color: var(--gs-header-backg-color);
+    color: var(--gs-text-color);
+}
+
+.pair-info.dark-mode
+{
+    color: var(--gs-text-color);
+}
+
+.card-game-image
+{
+    flex: 1 0 auto;
+    border-top-left-radius: 4px;
+}
+
+.card-game-image img 
+{
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.card-game-content
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-content: start;
+    align-items: flex-start;
+    padding: 10px;
+    padding-top: 0.1em;
+    flex: 0 1 auto;
+    margin-top: 10px;
+    font-family: 'Raleway';
+    font-weight: normal;
+}
+
+.card-game-content h3
+{
+    margin: 0;
+    font-size: 2em;
+    color: var(--heading);
+    font-weight: 400;
+}
+
+.card-game-description
+{
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 2em;
+    color: var(-heading);
+    font-weight: lighter;
+    text-overflow: ellipsis;
+}
+
+.card-panel
+{
+
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 1em 1em;
+    background-color: var(--bg);
+    border: 2px solid var(--bg-btn-carousel);
+    border-radius: 4px;
+    width: 55em;
+    height: 5em;
+}
+
+.card-panel-content
+{
+    flex-direction: row;
+}
+
+.card-panel-info .row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pair 
+{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pair-title 
+{
+    margin-top: 5px;
+    white-space: nowrap;
+    color: #000000;
+}
+
+.pair-info 
+{
+    color: var(--color-pair-info);
+    white-space: nowrap;
+}
+
+.btn-download
+{
+    background: var(--bg-btn-download-games-desc);
+    color: var(--color-text-btn-download-games-desc);
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 4px;
+    padding: 5px 10px;
+}

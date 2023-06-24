@@ -28,12 +28,6 @@
     transition: background-color 0.2s linear, color 0.2s linear;
 }
 
-#content-body.dark-mode
-{
-    background-color: var(--bg-dark-mode);
-    transition: background-color 0.2s linear, color 0.2s linear;
-}
-
 .carousel-wrapper
 {
     position: relative; 

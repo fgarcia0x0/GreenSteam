@@ -878,46 +878,55 @@ input[type="checkbox"] + label {
 
 @media (max-width: 600px)
 {
-    .gs-header-brand {
+    .gs-header-brand 
+    {
         width: calc(14.3rem / 2);
     }
 
-    .gs-header-icon-button {
+    .gs-header-icon-button 
+    {
         width: calc(60px / 2);
         height: calc(50px / 2);
     }
 
     #theme-toggle-icon, 
-    #core-profile-toggle {
-            font-size: 1rem;
-    }
-
-    .full-tab-menu li {
+    #core-profile-toggle 
+    {
         font-size: 1rem;
     }
 
-    .gs-tab-menu li {
+    .full-tab-menu li 
+    {
+        font-size: 1rem;
+    }
+
+    .gs-tab-menu li 
+    {
         font-size: 0.7rem;
         min-width: 0px;
         max-width: 6.87rem;
     }
 
-    .gs-tab-menu a {
+    .gs-tab-menu a 
+    {
         padding-top: 0.40rem;
         padding-bottom: 0.40rem;
     }
 
-    .gs-main-search-box {
+    .gs-main-search-box 
+    {
         width: 21rem; 
         height: 2.3rem; 
         font-size: 1rem;
     }
 
-    .gs-main-search-box > .gs-text-box {
+    .gs-main-search-box > .gs-text-box 
+    {
         padding-left: calc(2.81rem / 1.2);
     }
 
-    .search-icon {
+    .search-icon 
+    {
         font-size: 1rem;
         position: absolute;
     }
@@ -928,7 +937,10 @@ input[type="checkbox"] + label {
         width: 7rem;
     }
 
+    .order-by-box-text-top
+
     .order-by-box-content
+
     {
         right: 7rem;
         width: 7rem;
@@ -954,6 +966,12 @@ input[type="checkbox"] + label {
         bottom: calc(20px / 2);
     }
 
+    
+    .full-tab-menu li 
+    {
+        font-size: 1rem;
+
+
     .gs-reqs-panel-left-side h1,
     .gs-reqs-panel-right-side h1 {
         font-size: 0.6rem;
@@ -971,21 +989,25 @@ input[type="checkbox"] + label {
     .gs-reqs-panel-line {
         width: 1px;
         height: calc(23rem/2 - 1px);
+
     }
 }
 
 @media (max-width: 320px)
 {
-    .gs-header-brand {
-            width: calc(14.3rem / 2);
+    .gs-header-brand 
+    {
+        width: calc(14.3rem / 2);
     }
 
-    .gs-flex-container {
-            justify-content: center;
+    .gs-flex-container 
+    {
+        justify-content: center;
     }
 
-    .gs-header-icon-button {
-            display: none;
+    .gs-header-icon-button 
+    {
+        display: none;
     }
 
     #theme-toggle-icon, 
@@ -1027,8 +1049,9 @@ input[type="checkbox"] + label {
 
     .full-tab-menu li 
     {
-            font-size: 0.5rem;
+        font-size: 0.5rem;
     }
+
 
     .gs-reqs-panel {
         width: calc(60rem / 4);
