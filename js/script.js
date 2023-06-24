@@ -92,10 +92,20 @@ const imageMapping =
 {
     '1': 'the-last-of-us',
     '2': 'red-dead2',
-    '3': 'horizon',
+    '3': 'street-fighter6',
     '4': 'assassins-creed-valhalla',
     '5': 'hogwarts',
-    '6': 're4-remake'
+    '6': 're4-remake',
+    '7': 'f1-22',
+    '8': 'forza-horizon5',
+    '9': 'moto-gp23',
+    '10': 'wrc10',
+    '11': 'sprint-car',
+    '12': 'airport-simulator19',
+    '13': 'barista-simulator',
+    '14': 'bus-simulator21',
+    '15': 'dealership-simulator',
+    '16': 'metro-simulator2'
 };
 
 const dateMapping =
@@ -106,6 +116,16 @@ const dateMapping =
     '4': '10 nov 2020',
     '5': '10 fev 2023',
     '6': '24 mar 2023',
+    '7': '1 jul 2022',
+    '8': '9 nov 2021',
+    '9': '8 jun 2023',
+    '10': '2 set 2021',
+    '11': '21 fev 2020',
+    '12': '31 mai 2018',
+    '13': '20 mai 2023',
+    '14': '7 set 2021',
+    '15': '2 jun 2023',
+    '16': '14 jun 2023'
 }
 
 function redirectToGame (card)
