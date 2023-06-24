@@ -2,6 +2,7 @@
 :root
 {
     --bg: #EFEFEF;
+    --gs-text-color: black;
     --bg-input: #EFEFEF;
     --bg-card-login: #FFFFFF;
     --bg-navbar-login: #FFFFFF;
@@ -21,4 +22,8 @@
 
     --bg-btn-download-games-desc: linear-gradient(180deg, #75B022 0%, #618134 99.99%, rgba(217, 217, 217, 0.00) 100%, #588A1B 100%);    --color-text-btn-download-games-desc: #FFFFFF;
     --color-pair-info: #787878;
+
+    --color-btn-icon-hover-carousel: #009A49
+    --color-btn-icon-carousel: #009A49;
+    --color-btn-more-games: #009A4916;
 }
