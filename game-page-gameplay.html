@@ -17,7 +17,7 @@
         <div class="gs-header">
             <div class="gs-flex-container">
                 <a style="cursor: pointer;" href="index.html">
-                    <img class="gs-header-brand" src="resources/logo.svg" alt="Green Steam Logo">
+                    <img class="gs-header-brand" src="assets/logo.svg" alt="Green Steam Logo">
                 </a>
 
                 <div class="gs-header-rigth-container">
@@ -51,13 +51,13 @@
             <nav class="gs-center-div">
                 <div class="game-page-menu">
                     <div class="gs-tab-menu">
-                        <li class="active"><a href="game-page-desc.html">description</a></li>
+                        <li><a href="game-page-desc.html">description</a></li>
                         <li><a>requirements</a></li>
-                        <li><a>gameplay</a></li>
+                        <li class="active"><a href="game-page-gameplay.html">gameplay</a></li>
                     </div>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/b_AoQ0z3RYM" class="gameplay-card" frameborder="0"></iframe>
+                    <iframe src="https://www.youtube.com/embed/dM295KWloeE" class="gameplay-card" frameborder="0"></iframe>
                 </div>
                 <div class="block-comment-game" id="block-comment-game-id">
                     <div class="block-comment-game-header">
@@ -69,6 +69,26 @@
                             <i class="fa-regular fa-paper-plane"></i>
                             Send
                         </div>
+                        <div class="popup-satisfation-star-off" id="popup-satisfation-star-id">
+                            <div class="popup-satisfation-star-header">
+                                Degree of satisfaction
+                            </div>
+
+                            <div class="popup-satisfation-star-body">
+                                <div class="popup-satisfation-star-body-top">
+                                    <i class="fa-regular fa-star" id="star-1"></i>
+                                    <i class="fa-regular fa-star" id="star-2"></i>
+                                    <i class="fa-regular fa-star" id="star-3"></i>
+                                    <i class="fa-regular fa-star" id="star-4"></i>
+                                    <i class="fa-regular fa-star" id="star-5"></i>
+                                </div>
+                                <div class="popup-satisfation-star-body-bottom">
+                                    <div class="popup-buttom" id="popup-buttom-id">
+                                        Cancel
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,12 +97,6 @@
         </div>
     </div>
 
-    <!-- <script>
-        myScript = (txt) =>
-        {
-            document.body.innerHTML = "<p>" + txt + "</p>";
-        }
-    </script> -->
     <script src="js/comment_game_script.js"></script>
     <script src="js/orderby_events.js"></script>
     <script src="js/script.js"></script>
