@@ -1,5 +1,23 @@
 @import "./colors.css";
 
+@media screen and (max-width:700px)
+{
+    #carouselExampleIndicators .arrow-box{
+        display: none;
+    }    
+}
+@media(max-width:1280px)
+{
+    .carousel-wrapper{
+         
+        min-width: 100%;
+
+    }
+    .carousel-indicators-wrapper{
+        min-width: 100%;
+    }
+    
+}
 .navbar-container
 {
     position: fixed;
@@ -11,10 +29,11 @@
 
 .carousel-container
 {
-    padding: 5rem;
+    padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: violet; */
 }
 
 #carouselExampleIndicators
@@ -32,6 +51,7 @@
 {
     position: relative; 
     width: 70%;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -56,7 +76,7 @@
     position: absolute;
     width: 6% !important;
     height: 17%;
-    margin: 7rem auto;
+    margin: auto auto;
     background-color: var(--bg-btn-carousel) !important;
     border-radius: 4px;
 }
@@ -74,7 +94,7 @@
 .arrow-box:hover
 .arrow-icon
 {
-    color: var(--color-btn-icon-hover-carousel) !important;
+    color: var(--gs-accent-color) !important;
 }
 
 .arrow-box:hover
@@ -87,6 +107,8 @@
     position: absolute;
     color: var(--color-btn-icon-carousel);
     font-size: 2em;
+/*     background-color: yellowgreen;
+ */    padding: 5%
 }
 
 .arrow-icon:hover
@@ -108,7 +130,7 @@
     height: 10px;
     border-radius: 50%;
     border: none;
-    background-color: var(--bg-light-mode-indicator);
+    background-color: var(--border-inside-navbar);
     margin: 0 5px;
     padding: 0;
     cursor: pointer;
@@ -116,15 +138,18 @@
 
 .carousel-custom-indicators button.active 
 {
-    background-color: var(--color-btn-icon-hover-carousel);
+    background-color: var(--btn-hover-login);
 }
 
 .carousel-indicators-wrapper 
 {
     position: relative;
+    width: 20%;
+    margin: 0 auto;
     margin-top: 10px;
     text-align: center;
-}
+    /* background-color: yellowgreen; */
+ }
 
 .carousel-custom-indicators {
     display: inline-block;
@@ -183,8 +208,8 @@
 .-card {
     background-color: var(--gs-page-backg-color);
     border: none;
-    width: 14.75rem;
-    height: 14rem;
+    width: 12.75rem;
+    height: 12rem;
     position: relative;
     overflow: visible;
     box-shadow: 0 0 0.625rem black;
@@ -199,7 +224,7 @@
 .-card-top {
     display: block;
     width: 100%;
-    height: calc(14rem / 2);
+    height: calc(12rem / 2);
     overflow: hidden;
     border-radius: 0.25rem 0.25rem 0rem 0rem;
 }
@@ -207,8 +232,8 @@
 .-card-top img {
     transition: transform .3s;
     transform-origin: center;
-    width: 14.75rem;
-    height: calc(14rem / 2);
+    width: 12.75rem;
+    height: calc(12rem / 2);
     display: block;
     object-fit: cover;
     user-select: none;
@@ -223,8 +248,8 @@
 }
 
 .-card-bottom img {
-    width: 14.75rem;
-    height: calc(14rem / 2);
+    width: 12.75rem;
+    height: calc(12rem / 2);
     display: block;
     border-radius: 0px 0px 0.25rem 0.25rem;
     object-fit: cover;
@@ -297,7 +322,7 @@
 .card-grid {
     display: grid;
     margin-top: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(14.75rem /* 300px */, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(12.75rem /* 300px */, max-content));
     grid-gap: 2rem;
     justify-content: center;
     /* column-count: 4; */
