@@ -719,7 +719,7 @@ input[type="checkbox"] + label {
     border: 2px solid var(--gs-unfocosed-color);
     border-radius: 4px;
     width: 60rem;
-    height: 23rem;
+    height: 24rem;
 }
 
 .gs-reqs-panel-left-side {
@@ -781,7 +781,7 @@ input[type="checkbox"] + label {
     position: absolute;
     width: 2px;
     left: calc(48%);
-    height: calc(23rem - 2px);
+    height: calc(24rem - 2px);
     background-color: var(--gs-unfocosed-color);
 }
 
@@ -1133,7 +1133,7 @@ input[type="checkbox"] + label {
 
     .gs-reqs-panel {
         width: calc(60rem / 1.4);
-        height: calc(23rem / 1.4);
+        height: calc(24rem / 1.4);
         border-width: 1px;
     }
 
@@ -1165,7 +1165,7 @@ input[type="checkbox"] + label {
 
     .gs-reqs-panel-line {
         width: 1px;
-        height: calc(23rem/1.4 - 1px);
+        height: calc(24rem/1.4 - 1px);
     }
 
     .gameplay-card
@@ -1250,8 +1250,8 @@ input[type="checkbox"] + label {
     }
 
     .gs-reqs-panel {
-        width: calc(60rem / 3);
-        height: calc(23rem / 2);
+        width: calc(60rem / 2.8);
+        height: calc(24rem / 2);
         border-width: 1px;
     }
 
@@ -1289,7 +1289,7 @@ input[type="checkbox"] + label {
 
     .gs-reqs-panel-line {
         width: 1px;
-        height: calc(23rem/2 - 1px);
+        height: calc(24rem/2 - 1px);
 
     }
     .gameplay-card
@@ -1607,7 +1607,7 @@ input[type="checkbox"] + label {
 
     .gs-reqs-panel {
         width: calc(60rem / 4);
-        height: calc(23rem / 3);
+        height: calc(24rem / 3);
         border-width: 1px;
     }
 
@@ -1639,7 +1639,7 @@ input[type="checkbox"] + label {
 
     .gs-reqs-panel-line {
         width: 1px;
-        height: calc(23rem/3 - 1px);
+        height: calc(24rem/3 - 1px);
     }
 
     .gs-reqs-panel-group {
