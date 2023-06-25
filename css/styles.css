@@ -440,7 +440,7 @@ a:link, a:visited {
 .gs-about-layout {
     width: 100%;
     height: 100%;
-    background-image: url(https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2016/10/sitesderrubados-pf.jpg); 
+    background-image: url('../assets/page-down.jpg');
     background-repeat: no-repeat; 
     background-size: 100%;
 }

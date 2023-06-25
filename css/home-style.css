@@ -131,7 +131,7 @@
     border-radius: 50%;
     border: none;
     background-color: var(--border-inside-navbar);
-    margin: 0 5px;
+    margin: 0 4px;
     padding: 0;
     cursor: pointer;
 }
