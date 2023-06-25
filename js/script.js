@@ -14,42 +14,72 @@ function create_tab_active_event(event_tag)
     });
 }
 
+function OnThemeChanged(theme)
+{
+    let root = document.documentElement;
+    let icon = document.getElementById('theme-toggle-icon');
+    let contentBody = document.getElementById('content-body');
+    let cardGame = document.getElementById('card-game');
+    let panelGame = document.getElementById('card-panel');
+    let cardGameTitle = document.querySelector('.card-game-title');
+    let pairTitles = document.querySelectorAll('.pair-title');
+    let pairInfos = document.querySelectorAll('.pair-info');
+
+    if (theme == 'dark') 
+    {
+        icon.className = 'fas fa-moon';
+        root.classList.remove('dark-mode');
+        contentBody.classList.remove('carousel-dark');
+        contentBody.classList.remove('dark-mode');
+        cardGame.classList.remove('dark-mode');
+        panelGame.classList.remove('dark-mode');
+        cardGameTitle.classList.remove('dark-mode');
+        pairTitles.forEach(title => title.classList.remove('dark-mode'));
+        pairInfos.forEach(info => info.classList.remove('dark-mode'));
+    } 
+    else
+    {
+        icon.className = 'fas fa-sun';
+        root.classList.add('dark-mode');
+        contentBody.classList.add('carousel-dark');
+        contentBody.classList.add('dark-mode');
+        cardGame.classList.add('dark-mode');
+        panelGame.classList.add('dark-mode');
+        cardGameTitle.classList.add('dark-mode');
+        pairTitles.forEach(title => title.classList.add('dark-mode'));
+        pairInfos.forEach(info => info.classList.add('dark-mode'));
+    }
+}
+
 function create_toggle_theme_event()
 {
-    var modeToggleBtn = document.getElementById('theme-toggle');
-    var icon = document.getElementById('theme-toggle-icon');
-    var contentBody = document.getElementById('content-body');
-    var cardGame = document.getElementById('card-game');
-    var panelGame = document.getElementById('card-panel');
-    var cardGameTitle = document.querySelector('.card-game-title');
-    var pairTitles = document.querySelectorAll('.pair-title');
-    var pairInfos = document.querySelectorAll('.pair-info');
+    let modeToggleBtn = document.getElementById('theme-toggle');
+    
+    // Check theme preference from localStorage on page load
+    window.addEventListener('load', () => 
+    {
+        let theme = localStorage.getItem('theme');
+
+        if (theme === 'dark')
+            OnThemeChanged('dark');
+        else
+            OnThemeChanged('light');
+    });
+
+    window.addEventListener('unload', () => {
+        let root = document.documentElement;
+        let isDarkMode = root.classList.contains('dark-mode');
+        localStorage.setItem("theme", isDarkMode ? "light" : "dark");
+    });
 
     modeToggleBtn.addEventListener('click', () => {
-        var root = document.documentElement;
-        var isDarkMode = root.classList.contains('dark-mode');
-        
-        if (isDarkMode) {
-            icon.className = 'fas fa-moon';
-            root.classList.remove('dark-mode');
-            contentBody.classList.remove('carousel-dark');
-            contentBody.classList.remove('dark-mode');
-            cardGame.classList.remove('dark-mode');
-            panelGame.classList.remove('dark-mode');
-            cardGameTitle.classList.remove('dark-mode');
-            pairTitles.forEach(title => title.classList.remove('dark-mode'));
-            pairInfos.forEach(info => info.classList.remove('dark-mode'));
-        } else {
-            icon.className = 'fas fa-sun';
-            root.classList.add('dark-mode');
-            contentBody.classList.add('carousel-dark');
-            contentBody.classList.add('dark-mode');
-            cardGame.classList.add('dark-mode');
-            panelGame.classList.add('dark-mode');
-            cardGameTitle.classList.add('dark-mode');
-            pairTitles.forEach(title => title.classList.add('dark-mode'));
-            pairInfos.forEach(info => info.classList.add('dark-mode'));
-        }
+        let root = document.documentElement;
+        let isDarkMode = root.classList.contains('dark-mode');
+
+        if (isDarkMode)
+            OnThemeChanged('dark');
+        else
+            OnThemeChanged('light');
     });
 }
 
