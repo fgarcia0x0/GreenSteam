@@ -131,7 +131,7 @@ const dateMapping =
 function redirectToGame (card)
 {
     const gameId = card.getAttribute('data-id');
-    const gameImage = '../assets/covers/' + imageMapping[gameId] + '-cover.svg';
+    const gameImage = './assets/covers/' + imageMapping[gameId] + '-cover.svg';
     const gameTitle = card.querySelector('.gs-card-text h1').textContent;
     const gameDescription = card.querySelector('.gs-card-text p').textContent;
     const gameDate = 'Data de Lançamento: ' + dateMapping[gameId];
@@ -142,7 +142,7 @@ function redirectToGame (card)
     localStorage.setItem('gameDescription', gameDescription);
     localStorage.setItem('gameDate', gameDate);
 
-    window.location.href = '../game-page-desc.html';
+    window.location.href = './game-page-desc.html';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
