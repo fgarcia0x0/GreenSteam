@@ -277,9 +277,8 @@
 {
     font-size: 1.1rem;
     text-align: justify;
-    line-height: 2em;
     color: var(-heading);
-    font-weight: lighter;
+    font-weight: normal;
     text-overflow: ellipsis;
 }
 
@@ -337,4 +336,9 @@
     font-size: 1.125rem;
     border-radius: 4px;
     padding: 5px 10px;
+}
+
+.btn-download a {
+    color: inherit;
+    cursor: pointer;
 }
