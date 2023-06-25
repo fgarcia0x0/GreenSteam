@@ -190,21 +190,28 @@
     color: var(--gs-text-color);
     border: none;
 }
+
 .more-games
 {
-    background-color: var(--color-btn-more-games);
-    padding: 5px;  
+    background-color: var(--gs-hover-color);
+    text-align: center;
     border-radius: 4px;
     text-decoration: none;
-    color: var(--text-hover);
+    color: var(--gs-text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 100ms;
 }
+
 .more-games:hover
 {
     cursor: pointer;
-    background-color: var(--gs-unfocosed-color);
-    transition: 300ms;
-    
+    background-color: var(--color-btn-more-games);
+    color: var(--text-hover);
 }
+
 .-card {
     background-color: var(--gs-page-backg-color);
     border: none;
