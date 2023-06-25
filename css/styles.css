@@ -453,7 +453,9 @@ a:link, a:visited {
 
 .order-by-box
 {
+    display: flex;
     position: relative;
+
 }
 
 .order-by-box-content
