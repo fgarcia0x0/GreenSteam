@@ -41,10 +41,8 @@
     position: relative;
 }
 
-#content-body.dark-mode
-{
-    background-color: var(--bg-dark-mode);
-    transition: background-color 0.2s linear, color 0.2s linear;
+#content-body {
+    background-color: var(--gs-page-backg-color);
 }
 
 .carousel-wrapper
@@ -131,7 +129,7 @@
     border-radius: 50%;
     border: none;
     background-color: var(--border-inside-navbar);
-    margin: 0 5px;
+    margin: 0 4px;
     padding: 0;
     cursor: pointer;
 }
@@ -190,21 +188,28 @@
     color: var(--gs-text-color);
     border: none;
 }
+
 .more-games
 {
-    background-color: var(--color-btn-more-games);
-    padding: 5px;  
+    background-color: var(--gs-hover-color);
+    text-align: center;
     border-radius: 4px;
     text-decoration: none;
-    color: var(--text-hover);
+    color: var(--gs-text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 100ms;
 }
+
 .more-games:hover
 {
     cursor: pointer;
-    background-color: var(--gs-unfocosed-color);
-    transition: 300ms;
-    
+    background-color: var(--color-btn-more-games);
+    color: var(--text-hover);
 }
+
 .-card {
     background-color: var(--gs-page-backg-color);
     border: none;
