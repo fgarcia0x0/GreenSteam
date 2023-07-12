@@ -160,19 +160,36 @@ const dateMapping =
 
 function redirectToGame (card)
 {
+    // const gameId = card.getAttribute('data-id');
+    // const gameImage = './assets/covers/' + imageMapping[gameId] + '-cover.svg';
+    // const gameTitle = card.querySelector('.gs-card-text h1').textContent;
+    // const gameDescription = card.querySelector('.gs-card-text p').textContent;
+    // const gameDate = 'Data de Lançamento: ' + dateMapping[gameId];
+
+    // localStorage.setItem('gameId', gameId);
+    // localStorage.setItem('gameImage', gameImage);
+    // localStorage.setItem('gameTitle', gameTitle);
+    // localStorage.setItem('gameDescription', gameDescription);
+    // localStorage.setItem('gameDate', gameDate);
+
+    // window.location.href = './game-page-desc.html';
     const gameId = card.getAttribute('data-id');
-    const gameImage = './assets/covers/' + imageMapping[gameId] + '-cover.svg';
     const gameTitle = card.querySelector('.gs-card-text h1').textContent;
     const gameDescription = card.querySelector('.gs-card-text p').textContent;
     const gameDate = 'Data de Lançamento: ' + dateMapping[gameId];
-
-    localStorage.setItem('gameId', gameId);
-    localStorage.setItem('gameImage', gameImage);
-    localStorage.setItem('gameTitle', gameTitle);
-    localStorage.setItem('gameDescription', gameDescription);
-    localStorage.setItem('gameDate', gameDate);
-
-    window.location.href = './game-page-desc.html';
+    const gameImage = './assets/covers/' + imageMapping[gameId] + '-cover.svg';
+      
+    const gameData = {
+        gameId,
+        gameTitle,
+        gameDescription,
+        gameDate,
+        gameImage
+    };
+      
+    localStorage.setItem('gameData', JSON.stringify(gameData));
+      
+    window.location.href = './game-page-desc.html'; 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
